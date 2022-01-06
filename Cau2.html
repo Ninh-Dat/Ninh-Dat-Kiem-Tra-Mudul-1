@@ -8,17 +8,17 @@
 <script>
     function tryRemoveFromArray(Arr, x) {
         for (let i = 0; i < Arr.length; i++) {
-            if (Arr[i]===x) {
-                 Arr.splice(Arr.indexOf(Arr),1)
+            if (x === Arr[i]) {
+                Arr.splice(i, 1);
 
             }
-                return Arr;
-            }
 
+        }
+        return Arr;
 
     }
 
-    document.write(tryRemoveFromArray([2, 4, 5, 6], 7))
+    document.write(tryRemoveFromArray([2, 4, 5, 6], 5))
 </script>
 </body>
 </html>

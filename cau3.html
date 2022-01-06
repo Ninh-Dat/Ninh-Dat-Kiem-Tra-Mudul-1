@@ -7,24 +7,26 @@
 <body>
 <script>
     function isFibonacci(num) {
-        let a=0;
-        let b=1;
-        let c=a+b;
-        let arr=[];
-        for (let i=0;c<=num; i++){
+        let a = 0;
+        let b = 1;
+        let c = a + b;
+        let arr = [];
+        while ( c <= num)
+         {
             arr.push(c);
-            a=b;
-            b=c;
-            c=a+b;
+            a = b;
+            b = c;
+            c = a + b;
         }
 
-   if (arr.indexOf(num) >=0){
-       return true;
-   }else {
-       return false;
-   }
+        if (arr.indexOf(num) >= 0) {
+            return true;
+        } else {
+            return false;
+        }
 
     }
+
     document.write(isFibonacci(8))
 </script>
 </body>

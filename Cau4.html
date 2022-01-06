@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        canvas{
+        canvas {
             border: 1px solid aqua;
         }
     </style>
@@ -13,24 +13,25 @@
 <canvas id="canvas" style="width: 600px; height: 600px"></canvas>
 
 <script>
-    class Circle{
-        constructor(x,y,radius) {
-            this.x=x;
-            this.y=y;
-            this.radius=radius;
-            this.canvas= document.getElementById('canvas');
-            this.ctx=this.canvas.getContext('2d');
+    class Circle {
+        constructor(x, y, radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.canvas = document.getElementById('canvas');
+            this.ctx = this.canvas.getContext('2d');
         }
-        render(){
+
+        render() {
             this.ctx.beginPath();
-            this.ctx.fillStyle= "#000000";
-            this.ctx.arc(this.x,this.y,this.radius,0,Math.PI*2);
+            this.ctx.fillStyle = "#000000";
+            this.ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
             this.ctx.fill();
             this.ctx.closePath();
         }
     }
 
-    let circle=new Circle(10,10,100);
+    let circle = new Circle(10, 10, 100);
     circle.render();
 </script>
 </body>
